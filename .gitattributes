@@ -1,0 +1,7 @@
+# Scripts must parse identically on every OS.
+* text=auto eol=lf
+*.png binary
+*.heic binary
+*.heif binary
+*.tif binary
+*.sh text eol=lf

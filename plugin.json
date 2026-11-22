@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "techtrip-photography",
+  "version": "0.1.0",
+  "description": "Non-destructive image transformations for photographers. It starts with HEIC to TIFF: iPhone and other HEIC or HEIF photos become TIFF files that hold exactly the pixels the original decodes to, with capture date, location, lens data and colour profile kept, for editors that handle HEIC badly. Works on a whole folder or on the files you tick in a checkbox list, checks the tools it needs before it starts, verifies every output against its source, and can write a report. It never changes or deletes an original and never replaces an existing file. macOS. Includes a guided tour, photo-expert.",
+  "author": {
+    "name": "Terry Trippany (Try AI Solutions)",
+    "email": "terry.trippany@techtrip.ai",
+    "url": "https://github.com/TechTripAi"
+  },
+  "homepage": "https://github.com/TechTripAi/techtrip-photography",
+  "repository": "https://github.com/TechTripAi/techtrip-photography",
+  "license": "FSL-1.1-MIT",
+  "keywords": [
+    "photography",
+    "images",
+    "heic",
+    "tiff",
+    "image-conversion",
+    "lossless",
+    "agent-skills",
+    "claude-code",
+    "copilot-cli"
+  ]
+}

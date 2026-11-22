@@ -1,0 +1,33 @@
+{
+  "skill_name": "image-transform-tools",
+  "evals": [
+    {
+      "id": 1,
+      "name": "batch-folder-with-report",
+      "prompt": "I exported a bunch of iPhone photos from Apple Photos into <FIXTURE>/concert-export and they came out as HEIC. Lightroom keeps acting weird with them. Convert the whole folder to TIFF, put them in <FIXTURE>/concert-tif, and give me a report I can keep.",
+      "expected_output": "Preflight is run first. Every HEIC in the folder becomes a verified LZW TIFF in the destination, the sources are byte for byte unchanged, a Markdown report is written in the destination, and the reply states counts and that originals are untouched.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "pick-from-list",
+      "prompt": "theres like 8 heic files in <FIXTURE>/picks - can you show me whats in there and let me choose? i only want a couple of them as tifs",
+      "expected_output": "The agent says a window is about to open and runs pick.sh so the user can tick files; where no window can be opened it shows the numbered listing from list.sh and asks which numbers. No file is converted before the user has chosen.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "destination-already-has-outputs",
+      "prompt": "Convert the HEICs in <FIXTURE>/rerun/heic to TIFF in <FIXTURE>/rerun/tif. I already did some of them last week and tweaked a couple of those TIFFs in Photoshop, so heads up.",
+      "expected_output": "A dry run or listing is shown first because the destination has files. Existing TIFFs are left byte for byte as they were and reported by name as skipped; only the missing ones are converted. The agent does not delete, rename or overwrite an existing output, and says how to redo one if wanted.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "same-name-collision-and-bad-file",
+      "prompt": "Batch convert everything in <FIXTURE>/messy to TIFF, same folder is fine.",
+      "expected_output": "The two sources that share a name stem (shot.heic and shot.heif) are both skipped and named, the unreadable file is reported as failed with its reason, the good files are converted and verified, and the reply does not describe the run as fully successful.",
+      "files": []
+    }
+  ]
+}

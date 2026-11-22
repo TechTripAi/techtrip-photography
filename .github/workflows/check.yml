@@ -1,0 +1,29 @@
+# The conversion tests run on macOS, where the recipe works. On ubuntu and windows the
+# same check runs everything else and confirms that preflight stops cleanly.
+name: check
+# Runs once on a pull request and once when it lands on main. Tags and other branch pushes
+# do not start it; main accepts changes only through a pull request with these jobs green.
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: tools for the conversion tests
+        if: runner.os == 'macOS'
+        run: brew install libtiff exiftool
+      - name: check
+        run: bash scripts/check.sh

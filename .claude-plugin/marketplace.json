@@ -1,0 +1,20 @@
+{
+  "name": "techtrip-photography",
+  "owner": {
+    "name": "TechTripAi",
+    "url": "https://github.com/TechTripAi"
+  },
+  "metadata": {
+    "description": "Development marketplace for a checkout of this repository: the plugin loads in place. Users install every TechTrip plugin from the public TechTrip-AI-plugins catalog instead.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "techtrip-photography",
+      "source": "./",
+      "description": "Non-destructive image transformations for photographers. It starts with HEIC to TIFF: iPhone and other HEIC or HEIF photos become TIFF files that hold exactly the pixels the original decodes to, with capture date, location, lens data and colour profile kept, for editors that handle HEIC badly. Works on a whole folder or on the files you tick in a checkbox list, checks the tools it needs before it starts, verifies every output against its source, and can write a report. It never changes or deletes an original and never replaces an existing file. macOS. Includes a guided tour, photo-expert.",
+      "version": "0.1.0",
+      "category": "photography"
+    }
+  ]
+}
