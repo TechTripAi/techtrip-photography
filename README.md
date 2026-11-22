@@ -7,14 +7,15 @@
 > **V1: macOS only.** The conversion uses the decoder built into macOS. On Linux and
 > Windows the skills install and report that conversion is not supported there yet.
 
-> **Status: in development (version 0.1.0), not yet in the catalog.** It works on the
-> author's own photographs and passes its tests. Until it is listed, load it from a clone;
-> see "Developing".
+> **Status: first release, under test (version 0.1.0).** It works and is installable, but
+> expect rough edges and changes while it is being tried on real photographs. Reports of
+> anything that goes wrong are welcome as issues on this repository.
 
 **TechTrip AI's photography skills, one plugin for the whole domain.** It starts with image
 transformations that are safe to point at a folder of irreplaceable photographs: they read
 your originals, write new files, and never change, delete or replace anything. The first
-transformation turns HEIC photos into TIFF files with no further loss.
+transformation turns HEIC photos into TIFF files with no further loss. It is installed from
+the [TechTrip-AI-plugins](https://github.com/TechTripAi/TechTrip-AI-plugins) catalog.
 
 ## Install
 
@@ -25,7 +26,7 @@ transformation turns HEIC photos into TIFF files with no further loss.
 ```
 
 The first line registers the TechTrip catalog, the second installs the plugin, the third
-starts its tour. This route works once the plugin is listed in the catalog. For Copilot
+starts its tour. For Copilot
 CLI, Cursor, Codex, Gemini CLI and other tools, see "Other AI tools" below.
 
 ## Requirements

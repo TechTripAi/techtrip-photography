@@ -14,8 +14,8 @@ them over time.
 
 One tree carries an Agent Plugins 1.0.0 manifest at `plugin.json`, a Claude Code manifest at
 `.claude-plugin/plugin.json`, and plain `skills/<name>/SKILL.md` folders (Agent Skills
-format). In development at 0.1.0: private, and not listed in the TechTrip catalog until it
-is released.
+format). Released at 0.1.0; listed in the TechTrip catalog as `techtrip-photography`,
+category `photography`. Users install it from there (README "Install").
 
 Install a checkout for development (it loads in place):
 ```
@@ -193,13 +193,13 @@ claude --plugin-dir .               # then talk to it with a scratch folder of i
 
 Bump `version` in both manifests and in the entry in `.claude-plugin/marketplace.json`, add
 the CHANGELOG section, run `check.sh`, commit locally with a plain message (no attribution
-lines). The owner pushes. The first release also adds the entry to the TechTrip-AI-plugins
-catalog; after every later release that entry's `version` is set to the same string.
+lines). The owner pushes. After every release here, the entry's `version` in the
+TechTrip-AI-plugins catalog is set to the same string.
 
 ## Meta
 
 - License: **FSL-1.1-MIT** (`LICENSE.md`). Copyright 2026 Terry Trippany (Try AI Solutions).
-- Owner/repo: `TechTripAi/techtrip-photography` (private until released).
+- Owner/repo: `TechTripAi/techtrip-photography` (public).
 - Packaging, naming and release rules for every TechTrip plugin:
   https://github.com/TechTripAi/TechTrip-AI-plugins/blob/main/docs/packaging.md
   (the catalog's `docs/packaging.md`). Follow it; do not restate it here.

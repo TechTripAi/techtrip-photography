@@ -5,7 +5,7 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [0.1.0] - 2026-11-22
 
-First version. In development; not yet listed in the catalog.
+First version.
 
 ### Added
 - **`image-transform-tools`**, the skill for image transformations. It settles the source

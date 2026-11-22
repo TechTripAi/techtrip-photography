@@ -20,7 +20,7 @@ code() { set +e; "$@" >/dev/null 2>&1; c=$?; set -e; printf '%s' "$c"; }
 exists() { if [ -e "$2" ]; then pass "$1"; else bad "$1: $2 missing"; fi; }
 absent() { if [ -e "$2" ]; then bad "$1: $2 should not exist"; else pass "$1"; fi; }
 sum()  { cksum < "$1" | tr -d ' '; }
-finish() { echo; if [ "$fails" -gt 0 ]; then echo "$fails failure(s)"; exit 1; else echo "all passed"; fi; }
+finish() { echo; if [ "$fails" -gt 0 ]; then echo "$fails failure(s)"; exit 1; else echo "all passed"; exit 0; fi; }
 
 # --- things that hold on every operating system
 is "preflight rejects an unknown recipe" "$(code bash "$S/preflight.sh" --recipe nope)" 2

@@ -90,7 +90,6 @@ A recipe that cannot verify its output against its source says so in its referen
 2. Add the `## [x.y.z] - YYYY-MM-DD` section to `CHANGELOG.md`.
 3. `bash scripts/check.sh`.
 4. Commit locally with a plain message. The owner pushes.
-5. First release: add the entry to TechTrip-AI-plugins, a row to its README table and a row
-   to the tour table in its `docs/packaging.md`, after the repository is public and pushed.
-   Later releases: set the entry's `version` to the same string. The catalog's check
-   compares it with the pushed manifest, so it is done after the owner pushes.
+5. Set the entry's `version` in TechTrip-AI-plugins to the same string after every release
+   here. The catalog's check compares it with the pushed manifest, so it is done after the
+   owner pushes.
